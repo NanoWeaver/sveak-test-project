@@ -13,9 +13,9 @@ function hidePartialGridRow() {
 
   cards.forEach((card, index) => {
     if (index >= startOfPartialRowIndex) {
-      card.classList.add('hide-cards');
+      card.classList.add('hiden');
     } else {
-      card.classList.remove('hide-cards');
+      card.classList.remove('hiden');
     }
   });
 }

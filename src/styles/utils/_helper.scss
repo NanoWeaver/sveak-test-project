@@ -1,0 +1,15 @@
+.hiden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}

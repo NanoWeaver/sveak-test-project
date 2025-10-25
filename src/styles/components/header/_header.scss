@@ -22,7 +22,6 @@
     padding: 0;
     color: inherit;
     transition: opacity 0.2s ease-in-out;
-    @include off-button-outline();
     opacity: 0.3;
 
     @media (hover: hover) {
@@ -41,17 +40,9 @@
   .header {
     border: 0px;
 
-    &__button-wrapper {
-      color: var(--controls-color);
-    }
-
     &__switcher {
       &:focus-visible {
         opacity: 0.6;
-      }
-
-      &:active {
-        opacity: 1;
       }
     }
   }
@@ -60,18 +51,5 @@
 @media (max-width: $breakpoint-sm) {
   .header {
     grid-template-rows: 1fr;
-    &__button-wrapper {
-      color: var(--controls-color);
-    }
-
-    &__switcher {
-      &:focus-visible {
-        opacity: 0.6;
-      }
-
-      &:active {
-        opacity: 1;
-      }
-    }
   }
 }

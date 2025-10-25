@@ -4,6 +4,7 @@
   padding-top: 17px;
   padding-left: 17px;
   background-color: var(--primary-color);
+  font-weight: bold;
 
   &__heading {
     font-size: 22px;
@@ -11,7 +12,6 @@
   }
 
   &__text {
-    font-weight: bold;
     @include line-clamp(3);
   }
 }

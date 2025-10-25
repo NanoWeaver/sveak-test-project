@@ -1,0 +1,11 @@
+.grid-cards {
+  grid-area: content;
+  background-color: var(--background-color);
+  border-left: 2px solid $border-color;
+}
+
+@media (max-width: $breakpoint-md) {
+  .grid-cards {
+    position: relative;
+  }
+}

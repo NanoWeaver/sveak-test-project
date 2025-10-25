@@ -1,11 +1,28 @@
 .layout {
-  grid-area: content;
   background-color: var(--background-color);
-  border-left: 2px solid $border-color;
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  grid-template-rows: $header-height 1fr 100px;
+  grid-template-areas:
+    'developer  header'
+    'menu  content'
+    'footer  footer';
+  min-height: 100dvh;
 }
 
 @media (max-width: $breakpoint-md) {
   .layout {
-    position: relative;
+    grid-template-columns: 45px 1fr;
+    grid-template-rows: $header-height 1fr 80px;
+    grid-template-areas:
+      'burger header'
+      'content content'
+      'footer footer';
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .layout {
+    grid-template-rows: $header-height 1fr 240px;
   }
 }

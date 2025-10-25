@@ -21,7 +21,6 @@ export default defineConfig({
             'Safari >= 12',
             'Edge >= 79',
           ],
-          grid: 'autoplace',
         }),
       ],
     },

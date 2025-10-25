@@ -38,7 +38,6 @@
     padding: 0;
     position: relative;
     z-index: 11;
-    @include off-button-outline();
   }
   &__line {
     display: block;
@@ -62,15 +61,5 @@
 @media (max-width: $breakpoint-md) {
   .burger {
     display: flex;
-  }
-}
-
-@media (max-width: $breakpoint-sm) {
-  .burger {
-    background-color: var(--primary-color);
-
-    &__line {
-      background-color: var(--controls-color);
-    }
   }
 }

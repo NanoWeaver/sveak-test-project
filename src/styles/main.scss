@@ -3,74 +3,17 @@
 @import './utils/variables';
 @import './utils/color';
 @import './utils/_fonts';
-@import './components/header/header';
+@import './utils/_helper';
 @import './components/layout/layout';
+@import './components/header/header';
+@import './components/developer/developer';
 @import './components/menu/menu';
 @import './components/burger/burger';
+@import './components/grid-cards/grid-cards';
 @import './components/cards-container/cards-container';
 @import './components/card/card';
 @import './components/footer/footer';
 
 body {
   font-family: 'Roboto';
-}
-
-.body {
-  background-color: var(--background-color);
-  display: grid;
-  grid-template-columns: 310px 1fr;
-  grid-template-rows: 60px 1fr 100px;
-  grid-template-areas:
-    'developer  header '
-    'menu  content '
-    'footer  footer ';
-  min-height: 100dvh;
-}
-
-.hide-cards {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-.no-scroll {
-  overflow: hidden;
-  position: relative;
-  height: 100vh;
-}
-
-.developer {
-  grid-area: developer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__text {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: $breakpoint-md) {
-  .body {
-    grid-template-columns: 45px 1fr;
-    grid-template-rows: 60px 1fr 80px;
-    grid-template-areas:
-      'burger header '
-      'content content'
-      'footer footer';
-  }
-
-  .developer {
-    display: none;
-  }
-}
-
-@media (max-width: $breakpoint-sm) {
-  .body {
-    grid-template-rows: 60px 1fr 240px;
-  }
 }

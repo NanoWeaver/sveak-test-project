@@ -1,0 +1,16 @@
+.developer {
+  grid-area: developer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .developer {
+    display: none;
+  }
+}

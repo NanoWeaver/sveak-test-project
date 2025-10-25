@@ -7,7 +7,7 @@
 
   &__list {
     top: 0;
-    max-height: calc(100dvh - 55px);
+    max-height: calc(100dvh - $header-height - var(--menu-padding-top));
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -25,7 +25,6 @@
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
-    @include off-button-outline();
 
     @media (hover: hover) {
       &:hover {
