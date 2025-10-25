@@ -1,0 +1,11 @@
+.menu {
+  --menu-color: #efe5ff;
+  --menu-color-hover: #f1ccfc;
+  --menu-color-active: #e6a3fa;
+  --menu-padding-top: 0px;
+  @media (max-width: $breakpoint-md) {
+    --menu-color: #d6bdff;
+    --menu-color-active: #dcaafc;
+    --menu-padding-top: 72px;
+  }
+}

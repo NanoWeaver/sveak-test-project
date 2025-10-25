@@ -1,0 +1,39 @@
+.footer {
+  grid-area: footer;
+  border-top: 2px solid $border-color;
+  padding-top: 17px;
+  padding-left: 17px;
+  background-color: var(--primary-color);
+
+  &__heading {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-weight: bold;
+    @include line-clamp(3);
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .footer {
+    border: 0px;
+    padding-top: 6px;
+    padding-left: 15px;
+
+    &__text {
+      @include line-clamp(3);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .footer {
+    padding-top: 12px;
+    padding-left: 15px;
+    &__text {
+      @include line-clamp(12);
+    }
+  }
+}

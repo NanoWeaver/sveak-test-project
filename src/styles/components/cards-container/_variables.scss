@@ -1,0 +1,15 @@
+:root {
+  --card-min-width: var(--card-width-desktop);
+  --card-width-desktop: 160px;
+  @media (max-width: $breakpoint-lg) {
+    --card-width-desktop: 128px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    --card-width-desktop: 174px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    --card-width-desktop: 115px;
+  }
+}

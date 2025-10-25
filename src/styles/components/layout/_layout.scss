@@ -1,0 +1,11 @@
+.layout {
+  grid-area: content;
+  background-color: var(--background-color);
+  border-left: 2px solid $border-color;
+}
+
+@media (max-width: $breakpoint-md) {
+  .layout {
+    position: relative;
+  }
+}

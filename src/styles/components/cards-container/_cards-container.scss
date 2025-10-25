@@ -1,0 +1,22 @@
+@import './variables';
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--card-width-desktop));
+  grid-auto-rows: 128px;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 400px;
+
+  &--fill {
+    grid-template-columns: repeat(auto-fill, minmax(var(--card-min-width), 1fr));
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .cards-container {
+    grid-auto-rows: 115px;
+    padding-top: 26px;
+  }
+}

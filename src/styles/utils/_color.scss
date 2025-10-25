@@ -1,0 +1,20 @@
+:root {
+  --primary-color: var(--background-color);
+  --background-color: #efe5ff;
+  --secondary-color: #d8cfe6;
+  --controls-color: #8165ae;
+
+  @media (max-width: $breakpoint-md) {
+    --primary-color: #95d9ff;
+    --background-color: #d4f0ff;
+    --secondary-color: #bfd8e6;
+    --controls-color: #52a2d1;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    --primary-color: #adfcc8;
+    --background-color: #defee9;
+    --secondary-color: #c8e5d2;
+    --controls-color: #63ca85;
+  }
+}

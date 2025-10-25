@@ -1,0 +1,17 @@
+.card {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  &__text {
+    @include line-clamp(7);
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .card {
+    &__text {
+      @include line-clamp(6);
+    }
+  }
+}
