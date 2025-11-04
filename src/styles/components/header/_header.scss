@@ -1,3 +1,5 @@
+@import './variables';
+
 .header {
   background-color: var(--primary-color);
   border-left: 2px solid $border-color;
@@ -14,7 +16,67 @@
     color: var(--controls-color);
   }
 
+  &__switcher-container {
+    line-height: 0;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    @media (hover: hover) {
+      &:hover .header__switcher--animation {
+        opacity: 0.6;
+      }
+    }
+
+    &:active .header__switcher--animation {
+      opacity: 1;
+    }
+  }
+
+  &__switcher-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    margin: 0;
+    // overlaps the button to trigger the click
+    z-index: 1;
+    cursor: pointer;
+
+    &--second {
+      display: none;
+    }
+
+    &--first:checked {
+      display: none;
+
+      & ~ .header__switcher-input--second {
+        display: inline-block;
+      }
+
+      & ~ .header__switcher--animation {
+        animation: rebound 5s alternate 1;
+      }
+    }
+
+    &--second:checked {
+      display: none;
+
+      & ~ .header__switcher-input--first {
+        display: inline-block;
+      }
+
+      & ~ .header__switcher--animation {
+        animation: rebound-copy 5s alternate 1;
+      }
+    }
+  }
+
   &__switcher {
+    width: 25px;
+    height: 25px;
     line-height: 0;
     border: transparent;
     background: transparent;
@@ -40,6 +102,11 @@
   .header {
     border: 0px;
 
+    &__switcher-container {
+      &:focus-visible .header__switcher--animation {
+        opacity: 0.6;
+      }
+    }
     &__switcher {
       &:focus-visible {
         opacity: 0.6;

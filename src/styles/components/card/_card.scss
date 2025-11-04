@@ -1,10 +1,90 @@
+@import './variables.scss';
+
 .card {
   background-color: var(--secondary-color);
   border-radius: 10px;
-  overflow: hidden;
   padding: 10px;
   &__text {
     @include line-clamp(7);
+  }
+}
+
+@media (min-width: 1025px) {
+  .card {
+    &:last-child:nth-child(5n + 1) {
+      display: none;
+    }
+
+    &:nth-last-child(2):nth-child(5n + 1),
+    &:last-child:nth-child(5n + 2) {
+      display: none;
+    }
+
+    &:nth-last-child(3):nth-child(5n + 1),
+    &:nth-last-child(2):nth-child(5n + 2),
+    &:last-child:nth-child(5n + 3) {
+      display: none;
+    }
+
+    &:nth-last-child(4):nth-child(5n + 1),
+    &:nth-last-child(3):nth-child(5n + 2),
+    &:nth-last-child(2):nth-child(5n + 3),
+    &:last-child:nth-child(5n + 4) {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg-md-min) and (max-width: $breakpoint-lg) {
+  .card {
+    &:last-child:nth-child(4n + 1) {
+      display: none;
+    }
+
+    &:nth-last-child(2):nth-child(4n + 1),
+    &:last-child:nth-child(4n + 2) {
+      display: none;
+    }
+
+    &:nth-last-child(3):nth-child(4n + 1),
+    &:nth-last-child(2):nth-child(4n + 2),
+    &:last-child:nth-child(4n + 3) {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-lg-md) {
+  .card {
+    &:last-child:nth-child(3n + 1) {
+      display: none;
+    }
+
+    &:nth-last-child(2):nth-child(3n + 1),
+    &:last-child:nth-child(3n + 2) {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md-sm-min) and (max-width: $breakpoint-md) {
+  .card {
+    &:last-child:nth-child(3n + 1) {
+      display: none;
+    }
+
+    &:nth-last-child(2):nth-child(3n + 1),
+    &:last-child:nth-child(3n + 2) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md-sm) {
+  .card {
+    &:last-child:nth-child(odd) {
+      display: none;
+    }
   }
 }
 

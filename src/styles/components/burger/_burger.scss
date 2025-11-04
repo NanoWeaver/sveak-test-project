@@ -1,5 +1,41 @@
 @import './variables.scss';
 
+.burger-checkbox {
+  display: none;
+  position: absolute;
+  margin: 0;
+  width: 25px;
+  height: 20px;
+  top: 20px;
+  left: 20px;
+  opacity: 0;
+  z-index: 3;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:checked ~ .burger .burger__line {
+    background: $burger-active-color;
+
+    &:first-child {
+      transform: rotate(46deg) translate(2px, -2px);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    &:last-child {
+      transform: rotate(-46deg) translate(2px, 2px);
+    }
+  }
+}
+
 .burger {
   grid-area: burger;
   background-color: var(--primary-color);
@@ -7,23 +43,8 @@
   display: none;
   align-items: center;
 
-  &--active {
-    .burger__line {
-      background: $burger-active-color;
-
-      &:first-child {
-        transform: rotate(46deg) translate(2px, -2px);
-      }
-
-      &:nth-child(2) {
-        opacity: 0;
-        transform: scale(0);
-      }
-
-      &:last-child {
-        transform: rotate(-46deg) translate(2px, 2px);
-      }
-    }
+  & &__checheckbox:checked ~ .menu {
+    left: 0;
   }
 
   &__button {
@@ -37,7 +58,8 @@
     cursor: pointer;
     padding: 0;
     position: relative;
-    z-index: 11;
+    // overlaps the menu
+    z-index: 2;
   }
   &__line {
     display: block;
@@ -45,7 +67,7 @@
     height: 5px;
     background-color: var(--controls-color);
     border-radius: 2px;
-    transition: all $burger-transition;
+    transition: transform $burger-transition;
     transform-origin: center;
 
     &:first-child {
@@ -61,5 +83,19 @@
 @media (max-width: $breakpoint-md) {
   .burger {
     display: flex;
+  }
+
+  .burger-checkbox {
+    display: inline-block;
+
+    &:checked ~ .menu {
+      transform: translateX(260px);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .burger-checkbox:checked ~ .menu {
+    transform: translateX(100%);
   }
 }

@@ -127,7 +127,8 @@ table {
   border-spacing: 0;
 }
 
-button {
+button,
+li {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;

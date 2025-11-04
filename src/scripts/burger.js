@@ -48,7 +48,7 @@ function handleMediaChange(event) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const mlq = window.matchMedia('(width <= 641px)');
+  const mlq = window.matchMedia('(width <= 700px)');
   mlq.addEventListener('change', handleMediaChange);
   handleMediaChange(mlq);
 });

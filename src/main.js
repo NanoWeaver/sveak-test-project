@@ -1,2 +1,2 @@
-import './scripts/burger';
-import './scripts/hideCards';
+// import './scripts/burger';
+// import './scripts/hideCards';

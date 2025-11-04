@@ -6,6 +6,7 @@
 
 @media (max-width: $breakpoint-md) {
   .grid-cards {
+    border-left: 0;
     position: relative;
   }
 }

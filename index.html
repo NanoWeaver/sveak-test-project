@@ -10,39 +10,39 @@
   <body class="layout">
     <header class="header">
       <span class="header__button-wrapper">
-        <button class="header__switcher" data-shape="triangle" aria-label="Треугольные карточки">
-          <svg
-            width="20"
-            height="25"
-            viewBox="0 0 20 25"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M18.3637 10.8149C19.5942 11.6014 19.5941 13.3986 18.3637 14.1851L3.07716 23.9564C1.74589 24.8074 7.33641e-07 23.8513 8.02705e-07 22.2713L1.65694e-06 2.7287C1.726e-06 1.1487 1.7459 0.192598 3.07716 1.04356L18.3637 10.8149Z" />
-          </svg>
-        </button>
+        <div class="header__switcher-container">
+          <input
+            type="radio"
+            name="animation-switcher"
+            id="anim-first"
+            class="header__switcher-input header__switcher-input--first" />
+          <input
+            type="radio"
+            name="animation-switcher"
+            id="anim-second"
+            class="header__switcher-input header__switcher-input--second" />
+          <button
+            class="header__switcher header__switcher--animation"
+            data-shape="triangle"
+            aria-label="Треугольные карточки">
+            <svg viewBox="0 0 25 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <use href="/sprites.svg#triangle"></use>
+            </svg>
+          </button>
+        </div>
         <button class="header__switcher" data-shape="circle" aria-label="Круглые карточки">
-          <svg
-            width="23"
-            height="23"
-            viewBox="0 0 23 23"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <circle cx="11.5" cy="11.5" r="11.5" />
+          <svg viewBox="0 0 25 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12.5" cy="12.5" r="12.5" />
           </svg>
         </button>
         <button class="header__switcher" data-shape="square" aria-label="Квадратные карточки">
-          <svg
-            width="21"
-            height="21"
-            viewBox="0 0 21 21"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <rect width="21" height="21" rx="4" />
+          <svg viewBox="0 0 25 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <rect width="25" height="25" rx="4" />
           </svg>
         </button>
       </span>
     </header>
+    <input class="burger-checkbox" type="checkbox" name="burger" />
     <span class="burger">
       <button class="burger__button" aria-label="Открыть меню" aria-expanded="false">
         <span class="burger__line"></span>
@@ -59,202 +59,90 @@
             src="./src/assets/image/components/menu/icon-desktop.svg"
             alt="Изображения пункта меню"
             class="menu__item-img" />
-          <p class="menu__item-text">Возьмите</p>
+          <a class="menu__item-link">Возьмите</a>
         </li>
         <li class="menu__item">
           <img
             src="./src/assets/image/components/menu/icon-desktop.svg"
             alt="Изображения пункта меню"
             class="menu__item-img" />
-          <p class="menu__item-text">Меня</p>
+          <a class="menu__item-link">Меня</a>
         </li>
         <li class="menu__item">
           <img
             src="./src/assets/image/components/menu/icon-desktop.svg"
             alt="Изображения пункта меню"
             class="menu__item-img" />
-          <p class="menu__item-text">На</p>
+          <a class="menu__item-link">На</a>
         </li>
         <li class="menu__item">
           <img
             src="./src/assets/image/components/menu/icon-desktop.svg"
             alt="Изображения пункта меню"
             class="menu__item-img" />
-          <p class="menu__item-text">Работу</p>
+          <a class="menu__item-link">Работу</a>
         </li>
         <li class="menu__item">
           <img
             src="./src/assets/image/components/menu/icon-desktop.svg"
             alt="Изображения пункта меню"
             class="menu__item-img" />
-          <p class="menu__item-text">Возьмите</p>
+          <a class="menu__item-link">Возьмите</a>
         </li>
         <li class="menu__item">
           <img
             src="./src/assets/image/components/menu/icon-desktop.svg"
             alt="Изображения пункта меню"
             class="menu__item-img" />
-          <p class="menu__item-text">Меня</p>
+          <a class="menu__item-link">Меня</a>
         </li>
         <li class="menu__item">
           <img
             src="./src/assets/image/components/menu/icon-desktop.svg"
             alt="Изображения пункта меню"
             class="menu__item-img" />
-          <p class="menu__item-text">На</p>
+          <a class="menu__item-link">На</a>
         </li>
         <li class="menu__item">
           <img
             src="./src/assets/image/components/menu/icon-desktop.svg"
             alt="Изображения пункта меню"
             class="menu__item-img" />
-          <p class="menu__item-text">Работу</p>
+          <a class="menu__item-link">Работу</a>
         </li>
         <li class="menu__item">
           <img
             src="./src/assets/image/components/menu/icon-desktop.svg"
             alt="Изображения пункта меню"
             class="menu__item-img" />
-          <p class="menu__item-text">Возьмите</p>
+          <a class="menu__item-link">Возьмите</a>
         </li>
         <li class="menu__item">
           <img
             src="./src/assets/image/components/menu/icon-desktop.svg"
             alt="Изображения пункта меню"
             class="menu__item-img" />
-          <p class="menu__item-text">Меня</p>
+          <a class="menu__item-link">Меня</a>
         </li>
         <li class="menu__item">
           <img
             src="./src/assets/image/components/menu/icon-desktop.svg"
             alt="Изображения пункта меню"
             class="menu__item-img" />
-          <p class="menu__item-text">На</p>
+          <a class="menu__item-link">На</a>
         </li>
         <li class="menu__item">
           <img
             src="./src/assets/image/components/menu/icon-desktop.svg"
             alt="Изображения пункта меню"
             class="menu__item-img" />
-          <p class="menu__item-text">Работу</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">Возьмите</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">Меня</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">На</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">Работу</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">Возьмите</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">Меня</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">На</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">Работу</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">Возьмите</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">Меня</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">На</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">Работу</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">Возьмите</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">Меня</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">На</p>
-        </li>
-        <li class="menu__item">
-          <img
-            src="./src/assets/image/components/menu/icon-desktop.svg"
-            alt="Изображения пункта меню"
-            class="menu__item-img" />
-          <p class="menu__item-text">Работу</p>
+          <a class="menu__item-link">Работу</a>
         </li>
       </ul>
     </aside>
     <main class="grid-cards">
       <section class="cards-container">
-        <div class="card">
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -263,8 +151,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -273,8 +161,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -283,8 +171,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -293,8 +181,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -303,8 +191,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -313,8 +201,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -323,8 +211,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -333,8 +221,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -343,8 +231,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -353,8 +241,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -363,8 +251,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -373,8 +261,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -383,8 +271,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -393,8 +281,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -403,8 +291,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -413,8 +301,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -423,8 +311,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -433,8 +321,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -443,8 +331,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -453,8 +341,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -463,8 +351,8 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
-        <div class="card">
+        </article>
+        <article class="card">
           <p class="card__text">
             Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
             определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
@@ -473,7 +361,37 @@
             важные задания по разработке экспериментов, поражающих по своей масштабности и
             грандиозности.
           </p>
-        </div>
+        </article>
+        <article class="card">
+          <p class="card__text">
+            Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
+            определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
+            повседневной работы по формированию позиции обеспечивает актуальность вывода текущих
+            активов. Предварительные выводы неутешительны: существующая теория позволяет выполнить
+            важные задания по разработке экспериментов, поражающих по своей масштабности и
+            грандиозности.
+          </p>
+        </article>
+        <article class="card">
+          <p class="card__text">
+            Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
+            определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
+            повседневной работы по формированию позиции обеспечивает актуальность вывода текущих
+            активов. Предварительные выводы неутешительны: существующая теория позволяет выполнить
+            важные задания по разработке экспериментов, поражающих по своей масштабности и
+            грандиозности.
+          </p>
+        </article>
+        <article class="card">
+          <p class="card__text">
+            Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий требует
+            определения и уточнения форм воздействия. Учитывая ключевые сценарии поведения, начало
+            повседневной работы по формированию позиции обеспечивает актуальность вывода текущих
+            активов. Предварительные выводы неутешительны: существующая теория позволяет выполнить
+            важные задания по разработке экспериментов, поражающих по своей масштабности и
+            грандиозности.
+          </p>
+        </article>
       </section>
     </main>
     <footer class="footer">
