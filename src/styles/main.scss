@@ -1,6 +1,7 @@
 @import './utils/reset';
 @import './utils/mixins';
 @import './utils/variables';
+@import './utils/z-index';
 @import './utils/color';
 @import './utils/_fonts';
 @import './utils/_helper';
@@ -8,6 +9,7 @@
 @import './components/header/header';
 @import './components/developer/developer';
 @import './components/menu/menu';
+@import './components/burger-checkbox/burger-checkbox';
 @import './components/burger/burger';
 @import './components/grid-cards/grid-cards';
 @import './components/cards-container/cards-container';

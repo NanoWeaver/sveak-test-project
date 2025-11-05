@@ -1,0 +1,50 @@
+.burger-checkbox {
+  display: none;
+  position: fixed;
+  margin: 0;
+  width: 25px;
+  height: 20px;
+  top: 20px;
+  left: 20px;
+  opacity: 0;
+  // blocking the burger to trigger a click
+  z-index: $z-index-burger-checkbox;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:checked ~ .burger .burger__line {
+    background-color: #b6a1d9;
+
+    &:first-child {
+      transform: rotate(46deg) translate(2px, -2px);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    &:last-child {
+      transform: rotate(-46deg) translate(2px, 2px);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .burger-checkbox {
+    display: inline-block;
+
+    &:checked ~ .menu {
+      transform: translateX(260px);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .burger-checkbox:checked ~ .menu {
+    transform: translateX(100%);
+  }
+}

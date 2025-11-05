@@ -8,6 +8,11 @@
     'menu  content'
     'footer  footer';
   min-height: 100dvh;
+
+  // for modern browsers
+  &:has(.burger-checkbox:checked) {
+    overflow: hidden;
+  }
 }
 
 @media (max-width: $breakpoint-md) {

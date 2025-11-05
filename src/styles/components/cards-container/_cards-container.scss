@@ -2,7 +2,7 @@
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(5, minmax(var(--card-min-width), 250px));
+  grid-template-columns: repeat(5, var(--minmax));
   gap: 1.5rem;
   justify-content: center;
   padding: 1rem;
@@ -10,31 +10,25 @@
 
 @media (max-width: $breakpoint-lg) {
   .cards-container {
-    grid-template-columns: repeat(4, minmax(var(--card-min-width), 250px));
+    grid-template-columns: repeat(4, var(--minmax));
   }
 }
 
 @media (max-width: $breakpoint-lg-md) {
   .cards-container {
-    grid-template-columns: repeat(3, minmax(var(--card-min-width), 250px));
-  }
-}
-
-@media (max-width: $breakpoint-md) {
-  .cards-container {
-    grid-template-columns: repeat(3, minmax(var(--card-min-width), 250px));
+    grid-template-columns: repeat(3, var(--minmax));
   }
 }
 
 @media (max-width: $breakpoint-md-sm) {
   .cards-container {
-    grid-template-columns: repeat(2, minmax(var(--card-min-width), 250px));
+    grid-template-columns: repeat(2, var(--minmax));
   }
 }
 
 @media (max-width: $breakpoint-sm) {
   .cards-container {
-    grid-template-columns: repeat(2, minmax(var(--card-min-width), 250px));
+    grid-template-columns: repeat(2, var(--minmax));
     padding-top: 26px;
   }
 }
