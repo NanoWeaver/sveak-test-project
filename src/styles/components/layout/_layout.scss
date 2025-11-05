@@ -13,6 +13,8 @@
   &:has(.burger-checkbox:checked) {
     overflow: hidden;
   }
+
+  // You can rewrite the markup, where it will not be the body that is scrolled, but the container inside the body. The checkbox will be located on the same level with this container and affect it.
 }
 
 @media (max-width: $breakpoint-md) {

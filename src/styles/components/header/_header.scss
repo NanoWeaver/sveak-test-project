@@ -1,77 +1,3 @@
-@keyframes rebound {
-  0% {
-    transform: scale(1, 1) translateX(0);
-  }
-  25% {
-    transform: scale(0.9, 1.1) translateX(-200px);
-  }
-  50% {
-    transform: scale(1.1, 0.9) translateX(18px);
-  }
-  75% {
-    transform: scale(0.9, 1.1) translateX(-100px);
-  }
-  100% {
-    transform: scale(1, 1) translateX(0);
-  }
-}
-
-@keyframes rebound-copy {
-  0% {
-    transform: scale(1, 1) translateX(0);
-  }
-  25% {
-    transform: scale(0.9, 1.1) translateX(-200px);
-  }
-  50% {
-    transform: scale(1.1, 0.9) translateX(18px);
-  }
-  75% {
-    transform: scale(0.9, 1.1) translateX(-100px);
-  }
-  100% {
-    transform: scale(1, 1) translateX(0);
-  }
-}
-
-@media (max-width: $breakpoint-md) {
-  @keyframes rebound {
-    0% {
-      transform: scale(1, 1) translateX(0);
-    }
-    25% {
-      transform: scale(0.9, 1.1) translateX(-100px);
-    }
-    50% {
-      transform: scale(1.1, 0.9) translateX(18px);
-    }
-    75% {
-      transform: scale(0.9, 1.1) translateX(-50px);
-    }
-    100% {
-      transform: scale(1, 1) translateX(0);
-    }
-  }
-
-  @keyframes rebound-copy {
-    0% {
-      transform: scale(1, 1) translateX(0);
-    }
-    25% {
-      transform: scale(0.9, 1.1) translateX(-100px);
-    }
-    50% {
-      transform: scale(1.1, 0.9) translateX(18px);
-    }
-    75% {
-      transform: scale(0.9, 1.1) translateX(-50px);
-    }
-    100% {
-      transform: scale(1, 1) translateX(0);
-    }
-  }
-}
-
 .header {
   background-color: var(--primary-color);
   border-left: 2px solid $border-color;
@@ -85,7 +11,7 @@
     gap: 15px;
     justify-content: flex-end;
     align-items: center;
-    fill: var(--controls-color);
+    color: var(--controls-color);
   }
 
   &__switcher-container {
@@ -175,7 +101,7 @@
     width: 100%;
     height: $header-height;
     border: 0px;
-    z-index: 1;
+    z-index: $z-index-header;
 
     &__switcher-container {
       &:focus-visible .header__switcher--animation {
@@ -193,5 +119,79 @@
 @media (max-width: $breakpoint-sm) {
   .header {
     grid-template-rows: 1fr;
+  }
+}
+
+@keyframes rebound {
+  0% {
+    transform: scale(1, 1) translateX(0);
+  }
+  25% {
+    transform: scale(0.9, 1.1) translateX(-200px);
+  }
+  50% {
+    transform: scale(1.1, 0.9) translateX(18px);
+  }
+  75% {
+    transform: scale(0.9, 1.1) translateX(-100px);
+  }
+  100% {
+    transform: scale(1, 1) translateX(0);
+  }
+}
+
+@keyframes rebound-copy {
+  0% {
+    transform: scale(1, 1) translateX(0);
+  }
+  25% {
+    transform: scale(0.9, 1.1) translateX(-200px);
+  }
+  50% {
+    transform: scale(1.1, 0.9) translateX(18px);
+  }
+  75% {
+    transform: scale(0.9, 1.1) translateX(-100px);
+  }
+  100% {
+    transform: scale(1, 1) translateX(0);
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  @keyframes rebound {
+    0% {
+      transform: scale(1, 1) translateX(0);
+    }
+    25% {
+      transform: scale(0.9, 1.1) translateX(-100px);
+    }
+    50% {
+      transform: scale(1.1, 0.9) translateX(18px);
+    }
+    75% {
+      transform: scale(0.9, 1.1) translateX(-50px);
+    }
+    100% {
+      transform: scale(1, 1) translateX(0);
+    }
+  }
+
+  @keyframes rebound-copy {
+    0% {
+      transform: scale(1, 1) translateX(0);
+    }
+    25% {
+      transform: scale(0.9, 1.1) translateX(-100px);
+    }
+    50% {
+      transform: scale(1.1, 0.9) translateX(18px);
+    }
+    75% {
+      transform: scale(0.9, 1.1) translateX(-50px);
+    }
+    100% {
+      transform: scale(1, 1) translateX(0);
+    }
   }
 }

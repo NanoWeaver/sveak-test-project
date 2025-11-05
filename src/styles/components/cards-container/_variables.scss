@@ -1,5 +1,5 @@
 :root {
-  --minmax: minmax(var(--card-min-width), 250px);
+  --cards-width-minmax: minmax(var(--card-min-width), 250px);
   --card-min-width: var(--card-width);
   --card-width: 114px;
 
